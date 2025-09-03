@@ -58,9 +58,9 @@
             // 
             listBox2.FormattingEnabled = true;
             listBox2.ItemHeight = 15;
-            listBox2.Location = new Point(404, 32);
+            listBox2.Location = new Point(251, 206);
             listBox2.Name = "listBox2";
-            listBox2.Size = new Size(131, 364);
+            listBox2.Size = new Size(228, 499);
             listBox2.TabIndex = 2;
             listBox2.Visible = false;
             // 
@@ -76,7 +76,7 @@
             // 
             // RTB1
             // 
-            RTB1.Location = new Point(394, 32);
+            RTB1.Location = new Point(408, 32);
             RTB1.Name = "RTB1";
             RTB1.Size = new Size(322, 538);
             RTB1.TabIndex = 4;
@@ -84,7 +84,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(394, 576);
+            button2.Location = new Point(408, 576);
             button2.Name = "button2";
             button2.Size = new Size(113, 51);
             button2.TabIndex = 5;
