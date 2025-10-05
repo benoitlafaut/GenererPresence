@@ -1,7 +1,4 @@
 using System.Diagnostics;
-using System.Net.Sockets;
-using System.Windows.Forms;
-using static System.Windows.Forms.ListBox;
 
 namespace GenererPresence
 {
@@ -20,8 +17,8 @@ namespace GenererPresence
         private void ChargerTireurs()
         {
             listBox1.Items.Clear();
-
-            List<string> tireurs = File.ReadAllLines(Directory.GetCurrentDirectory() + @"\" + "AllTireurs.txt").ToList();
+            var path = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            List<string> tireurs = File.ReadAllLines(path + @"\" + "AllTireurs.txt").ToList();
             foreach (string tireur in tireurs)
             {
                 string[] dataTireur = tireur.Split(';');
@@ -67,6 +64,12 @@ namespace GenererPresence
         private void button4_Click(object sender, EventArgs e)
         {
             ChargerTireurs();
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            label5.Text = monthCalendar1.SelectionStart.Date.ToLongDateString() + "  (" + monthCalendar1.SelectionStart.Date.ToShortDateString() + ")";
+
         }
     }
 }

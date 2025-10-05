@@ -36,13 +36,15 @@
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
+            label5 = new Label();
             SuspendLayout();
             // 
             // monthCalendar1
             // 
-            monthCalendar1.Location = new Point(18, 32);
+            monthCalendar1.Location = new Point(18, 5);
             monthCalendar1.Name = "monthCalendar1";
             monthCalendar1.TabIndex = 0;
+            monthCalendar1.DateChanged += monthCalendar1_DateChanged;
             // 
             // listBox1
             // 
@@ -112,11 +114,20 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
+            // label5
+            // 
+            label5.BorderStyle = BorderStyle.FixedSingle;
+            label5.Location = new Point(18, 165);
+            label5.Name = "label5";
+            label5.Size = new Size(227, 23);
+            label5.TabIndex = 8;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 754);
+            Controls.Add(label5);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -141,5 +152,6 @@
         private Button button2;
         private Button button3;
         private Button button4;
+        private Label label5;
     }
 }
