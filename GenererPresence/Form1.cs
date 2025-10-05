@@ -58,7 +58,9 @@ namespace GenererPresence
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Process.Start("notepad.exe", Directory.GetCurrentDirectory() + @"\AllTireurs.txt");
+            var path = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+
+            Process.Start("notepad.exe", path + @"\AllTireurs.txt");
         }
 
         private void button4_Click(object sender, EventArgs e)
